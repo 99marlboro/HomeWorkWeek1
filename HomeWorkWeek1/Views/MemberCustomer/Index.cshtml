@@ -1,0 +1,95 @@
+﻿@model IEnumerable<HomeWorkWeek1.Models.客戶聯絡人>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>客戶聯絡人</h2>
+<p>
+    @using (Html.BeginForm("Index", "MemberBank", FormMethod.Post))
+    {
+    <p>
+        <table class="table">
+            <tr>
+                <td>
+                    @Html.Label("姓名:")<br />
+                    @Html.Label("手機:")<br />
+                    @Html.Label("Email:")<br />
+                    @Html.Label("關鍵字:")
+                </td>
+                <td>
+                    @Html.TextBox("Name")<br />
+                    @Html.TextBox("Cell")<br />
+                    @Html.TextBox("Email")<br />
+                    @Html.TextBox("KeyWord")
+                </td>
+                <td>
+                    <input type="submit" value="搜尋" />
+                </td>
+            </tr>
+        </table>
+    </p>
+    }
+    </p>
+    <p>
+<p>
+    @Html.ActionLink("新增客戶連絡人", "Create", new { icMCid = ViewData["iMCid"] })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.職稱)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.姓名)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.手機)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.電話)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.是否已刪除)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.客戶資料.客戶名稱)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.職稱)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.姓名)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.手機)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.電話)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.是否已刪除)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.客戶資料.客戶名稱)
+        </td>
+        <td>
+            @Html.ActionLink("編輯", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("詳細", "Detail", new { id = item.Id }) |
+            @Html.ActionLink("刪除", "Delete", new { id = item.Id })
+        </td>
+    </tr>
+}
+
+</table>
