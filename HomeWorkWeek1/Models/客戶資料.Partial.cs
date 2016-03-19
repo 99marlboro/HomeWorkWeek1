@@ -5,7 +5,7 @@ namespace HomeWorkWeek1.Models
     using System.ComponentModel.DataAnnotations;
     
     [MetadataType(typeof(客戶資料MetaData))]
-    public partial class 客戶資料
+    public partial class 客戶資料 : I客戶資料
     {
     }
     
@@ -36,8 +36,11 @@ namespace HomeWorkWeek1.Models
         public string Email { get; set; }
         [Required]
         public bool 是否已刪除 { get; set; }
+        [Required]
+        public int 客戶分類Id { get; set; }
     
         public virtual ICollection<客戶銀行資訊> 客戶銀行資訊 { get; set; }
         public virtual ICollection<客戶聯絡人> 客戶聯絡人 { get; set; }
+        public virtual 客戶分類 客戶分類 { get; set; }
     }
 }

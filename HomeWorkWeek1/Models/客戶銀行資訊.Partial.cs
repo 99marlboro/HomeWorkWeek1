@@ -5,7 +5,7 @@ namespace HomeWorkWeek1.Models
     using System.ComponentModel.DataAnnotations;
     
     [MetadataType(typeof(客戶銀行資訊MetaData))]
-    public partial class 客戶銀行資訊
+    public partial class 客戶銀行資訊 : I客戶銀行資訊
     {
     }
     

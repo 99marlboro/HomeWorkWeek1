@@ -25,10 +25,15 @@
                     <li>@Html.ActionLink("首頁", "Index", "Home")</li>
                     @*<li>@Html.ActionLink("關於", "About", "Home")</li>
                     <li>@Html.ActionLink("連絡方式", "Contact", "Home")</li>*@
-                    <li>@Html.ActionLink("客戶資料", "Index", "Member")</li>
+                    @*<li>@Html.ActionLink("客戶資料", "Index", "Member")</li>
                     <li>@Html.ActionLink("客戶銀行資訊", "Index", "MemberBank")</li>
-                    <li>@Html.ActionLink("客戶連絡人資訊", "Index", "MemberCustomer")</li>
+                    <li>@Html.ActionLink("客戶連絡人資訊", "Index", "MemberCustomer")</li>*@
                     <li>@Html.ActionLink("客戶資料總表", "Index", "MemberReport")</li>
+
+                    <li>@Html.ActionLink("客戶資料", "Index", "客戶資料")</li>
+                    <li>@Html.ActionLink("客戶銀行資訊", "Index", "客戶銀行資訊")</li>
+                    <li>@Html.ActionLink("客戶連絡人資訊", "Index", "客戶聯絡人")</li>
+
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

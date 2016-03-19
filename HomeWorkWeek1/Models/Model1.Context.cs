@@ -25,10 +25,10 @@ namespace HomeWorkWeek1.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<客戶資料> 客戶資料 { get; set; }
         public virtual DbSet<客戶銀行資訊> 客戶銀行資訊 { get; set; }
         public virtual DbSet<客戶聯絡人> 客戶聯絡人 { get; set; }
         public virtual DbSet<客戶資料總表> 客戶資料總表 { get; set; }
+        public virtual DbSet<客戶分類> 客戶分類 { get; set; }
     }
 }

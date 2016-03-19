@@ -70,6 +70,7 @@ namespace HomeWorkWeek1.Controllers
             //檢察重覆Email
             客戶聯絡人 oCheckMemberCustomer = new 客戶聯絡人();
             oCheckMemberCustomer = db.客戶聯絡人.Where(m => m.客戶Id == oMemberCustomer.客戶Id && m.Email == oMemberCustomer.Email).FirstOrDefault();
+            // oCheckMemberCustomer.Any()  //可以用
             if (oCheckMemberCustomer == null)
             {
                 db.客戶聯絡人.Add(oMemberCustomer);
@@ -137,7 +138,6 @@ namespace HomeWorkWeek1.Controllers
             return RedirectToAction("Index");
         }
         #endregion
-
 
         #region Other
         private void SaveChanges()
